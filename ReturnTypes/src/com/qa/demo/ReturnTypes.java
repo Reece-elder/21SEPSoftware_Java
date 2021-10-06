@@ -19,6 +19,10 @@ public class ReturnTypes {
 		return "Hey, this is being returned :o";
 	}
 	
+	public static void returnVoid() {
+		return;
+	}
+	
 //  Task
 //	Create method(s) that return the following
 //	- String
