@@ -19,6 +19,16 @@ public class ReturnTypes {
 		return "Hey, this is being returned :o";
 	}
 	
+//  Task
+//	Create method(s) that return the following
+//	- String
+//	- int
+//	- boolean
+//	- char
+//  - float
+//	- Nothing
+// Print those returns to the console (using the main class)
+	
 	
 	
 }
