@@ -1,6 +1,8 @@
 package com.qa.runner;
 
 import com.qa.demo.ControlFlow;
+import com.qa.demo.DiceRoller;
+import com.qa.demo.Scope;
 import com.qa.demo.Stack;
 
 public class Runner {
@@ -15,8 +17,13 @@ public class Runner {
 //		ControlFlow.method2();
 		
 //		System.out.println(Stack.secondLayer(4));
-		System.out.println(Stack.firstLayer());
-		int total = Stack.firstLayer();
+//		System.out.println(Stack.firstLayer());
+//		int total = Stack.firstLayer();
+		
+		System.out.println(DiceRoller.getRandNum(1));
+		
+		Scope.conflictingDemo();
+		Scope.printPassword();
 		
 		return;
 	}
