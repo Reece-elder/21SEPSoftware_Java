@@ -60,6 +60,8 @@ public class Arrays {
 		String[] foodArray = {"Pizza", "Lasagna", "Pad Thai", "Toad in the Hole"};
 		System.out.println(foodArray);
 		System.out.println(foodArray[2]);
+		foodArray[2] = "Yaki Udon";
+		System.out.println(foodArray[2]);
 		System.out.println("==================================================");
 //		System.out.println(foodArray[4]);
 		// Array lengths start from 1
@@ -89,5 +91,26 @@ public class Arrays {
 		// 100, 81, 64.. 
 		
 	}
+	
+	public static void enhancedForLoop() {
+		
+		String[] pizzas = {"Pepperoni", "Meat Feast", "Hawaiian", "Calzone", "Veggie"};
+		
+		// If I wanted to iterate through the list
+		
+		for(int i = 0; i < pizzas.length; i++) {
+			System.out.println(pizzas[i]);
+		}
+		
+		// You can use an ENHANCED for each loop
+		
+		// for command word
+		// Data type and stand in variable : array
+		for(String pizza : pizzas) {
+			System.out.println(pizza);
+		}
+		
+	}
 
 }
+
