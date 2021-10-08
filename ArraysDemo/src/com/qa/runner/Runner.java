@@ -6,7 +6,8 @@ public class Runner {
 	
 	public static void main(String[] args) {
 		
-		Arrays.arrayDemo();
+//		Arrays.arrayDemo();
+		Arrays.arrayLoop();
 		
 	}
 
