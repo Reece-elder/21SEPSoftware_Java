@@ -10,9 +10,13 @@ public class Runner {
 		// CakeTin is our data type
 		// newCake is the name of our variable
 		// new CakeTin() means return a new cake object using the constructor
-		CakeTin cake = new CakeTin();
-		System.out.println(cake.icing);
-		System.out.println(cake);
+		CakeTin spongeCake = new CakeTin("Jam", 1, "Beige", true);
+		CakeTin newCake = new CakeTin("Chocolate", 5, "Pink", true);
+//		CakeTin newCake = newCakeTin(filling = jam)
+				System.out.println(spongeCake);
+		System.out.println(spongeCake.filling);
+		System.out.println(newCake.filling);
+		
 		
 		// Task
 		// Choose an animal you want to work with (Bird, lizard, cat) 

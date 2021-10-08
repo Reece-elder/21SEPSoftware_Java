@@ -77,6 +77,11 @@ public class ArrayLists {
 		Collections.sort(pizzaList);
 		System.out.println(pizzaList);
 		
+		// Extended Task 
+		
+	System.out.println(pizzaList.getClass().getCanonicalName());
+		
+		
 	
 		
 		

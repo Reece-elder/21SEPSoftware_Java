@@ -16,21 +16,34 @@ public class CakeTin {
 	public String colour;
 	public boolean icing;
 	
+	// Generates a constructor we can use
+	// Right Click -> Source -> Generate Constructor
+	// Shift Alt S -> Generate Constructor
+	public CakeTin(String filling, int tiers, String colour, boolean icing) {
+		super();
+		this.filling = filling;
+		this.tiers = tiers;
+		this.colour = colour;
+		this.icing = icing;
+	}
+	
 	// A constructor to create a cake object from our class
 	// This is the method we will be calling from our main
 	
 	// No return type AND the exact name of the class
-	public CakeTin() {
-		
-		// What we need inside is to define the properties of our cake
-		this.filling = "coffee cream";
-		this.tiers = 2;
-		this.colour = "beigey brown";
+//	public CakeTin() {
+//		
+//		// What we need inside is to define the properties of our cake
+//		this.filling = "coffee cream";
+//		this.tiers = 2;
+//		this.colour = "beigey brown";
 //		this.icing = false;
-		icing = false;
-		
-		
-		
-	}
+//		icing = false;
+//		
+//		
+//		
+//	}
+	
+	
 
 }
