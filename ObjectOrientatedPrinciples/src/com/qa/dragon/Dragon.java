@@ -1,6 +1,9 @@
 package com.qa.dragon;
 
-public class Dragon {
+import com.qa.lizard.Lizard;
+
+// Extending abstract classes works the same way as parent classes
+public class Dragon extends Lizard {
 	
 	// Encapsulation
 	
@@ -61,6 +64,12 @@ public class Dragon {
 			this.wingSpan = wingSpan;
 		}
 		
+	}
+
+
+	@Override
+	public void sleep() {
+		System.out.println("Lounges on a pile of gold");
 	}
 	
 	
