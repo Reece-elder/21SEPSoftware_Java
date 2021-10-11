@@ -9,11 +9,19 @@ public class Unicorn extends MythologicalCreature {
 	private boolean wings;
 	private String colour;
 	
-	public Unicorn(int hornSize, boolean wings, String colour) {
-		super();
+	public Unicorn(boolean magical, String creatureType, int hornSize, boolean wings, String colour) {
+		super(magical, creatureType);
 		this.hornSize = hornSize;
 		this.wings = wings;
 		this.colour = colour;
+	}
+	
+	// Over ride the magicPower method
+	// Override here is optional, but good practice for devs
+	// to know it is being overridden
+	@Override
+	public String magicPower() {
+		return "*sparkles* neeeeeeiiiiggghhhhh";
 	}
 
 	public int getHornSize() {
@@ -39,6 +47,14 @@ public class Unicorn extends MythologicalCreature {
 	public void setColour(String colour) {
 		this.colour = colour;
 	}
+
+	@Override
+	public String toString() {
+		return "Unicorn [hornSize=" + hornSize + ", wings=" + wings + ", colour=" + colour + ", magical=" + magical
+				+ ", creatureType=" + creatureType + "]";
+	}
+	
+	
 	
 	
 	

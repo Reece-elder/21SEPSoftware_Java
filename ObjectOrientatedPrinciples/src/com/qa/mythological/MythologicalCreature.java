@@ -13,7 +13,9 @@ public class MythologicalCreature {
 	// Default (unspecified) -- accessible ANYWHERE in your package
 	
 	// These are our fields // variables // attributes
-	public boolean magical = true;
+	public boolean magical;
+	
+	public String creatureType;
 	
 	// Create a method 
 	public String magicPower() {
@@ -27,6 +29,14 @@ public class MythologicalCreature {
 	public void setMagical(boolean magical) {
 		this.magical = magical;
 	}
+
+	public MythologicalCreature(boolean magical, String creatureType) {
+		super();
+		this.magical = magical;
+		this.creatureType = creatureType;
+	}
+	
+	
 	
 	
 	

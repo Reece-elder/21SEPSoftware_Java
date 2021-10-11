@@ -18,9 +18,10 @@ public class Runner {
 //		
 //		charizard.setName("charizard");
 //		
-		Unicorn kyle = new Unicorn(5, true, "teal");
+		Unicorn kyle = new Unicorn(true, "unicorn", 5, true, "teal");
 		System.out.println(kyle.isMagical());
 		System.out.println(kyle.magicPower());
+		System.out.println(kyle);
 		
 	}
 
