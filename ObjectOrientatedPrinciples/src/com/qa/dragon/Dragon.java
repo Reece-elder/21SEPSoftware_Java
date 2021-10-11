@@ -41,7 +41,7 @@ public class Dragon {
 		
 		if (name == "charizard") {
 			System.out.println("Dont do that, we'll get sued :( ");
-			this.name = "charlie";
+			this.name = "charezard";
 		} else {
 			this.name = name;
 		}
