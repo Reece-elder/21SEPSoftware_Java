@@ -12,6 +12,7 @@ public class Runner {
 		// new CakeTin() means return a new cake object using the constructor
 		CakeTin spongeCake = new CakeTin("Jam", 1, "Beige", true);
 		CakeTin newCake = new CakeTin("Chocolate", 5, "Pink", true);
+		CakeTin testCake = new CakeTin(null, 0, null, false);
 //		CakeTin newCake = newCakeTin(filling = jam)
 		System.out.println(spongeCake);
 		System.out.println(spongeCake.filling);
