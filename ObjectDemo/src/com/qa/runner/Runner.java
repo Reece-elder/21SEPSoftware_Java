@@ -13,7 +13,7 @@ public class Runner {
 		CakeTin spongeCake = new CakeTin("Jam", 1, "Beige", true);
 		CakeTin newCake = new CakeTin("Chocolate", 5, "Pink", true);
 //		CakeTin newCake = newCakeTin(filling = jam)
-				System.out.println(spongeCake);
+		System.out.println(spongeCake);
 		System.out.println(spongeCake.filling);
 		System.out.println(newCake.filling);
 		

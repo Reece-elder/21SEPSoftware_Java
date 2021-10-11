@@ -10,7 +10,10 @@ public class ForLoops {
 	// Iterator (How the value changes)
 	// Code block (what do you want to loop)
 	
-	public static void loopDemo() {
+	// There is no need to generate a constructor if 
+	// no data is being passed in 
+	
+	public void loopDemo() {
 		
 		// Create a loop that counts to 10 
 		
