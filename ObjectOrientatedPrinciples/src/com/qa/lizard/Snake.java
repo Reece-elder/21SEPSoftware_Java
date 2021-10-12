@@ -1,5 +1,6 @@
 package com.qa.lizard;
 
+import com.qa.dragon.Dragon;
 import com.qa.interfaces.Camouflage;
 
 public class Snake implements Camouflage {
