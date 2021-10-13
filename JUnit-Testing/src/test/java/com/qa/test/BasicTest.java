@@ -3,7 +3,12 @@ package com.qa.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import com.qa.demo.Basic;
+
 public class BasicTest {
+	
+	// Creating an object to test the methods
+	Basic basicObject = new Basic();
 	
 	// When creating tests we dont have any type of runner
 	// Test classes should be created to test our classes in src/main/java
@@ -27,7 +32,44 @@ public class BasicTest {
 		
 		// Assert - Checking the return against what it should be
 		// Asserting that 6 = num1(2) + num2(4)
-		Assertions.assertEquals(5, result);
+		Assertions.assertEquals(6, result);
+		
+	}
+	
+	// Writing a test to assert helloWorld returns Hello World
+	
+	@Test
+	public void helloWorldTest() {
+		// Arrange - Arranging the variables I need
+		String testString; 
+		
+		// Act - Running the methods / code im testing
+		testString = basicObject.helloWorld();
+		System.out.println(testString);
+		
+		// Assert - Checking the values
+		// When we run helloWorld it SHOULD return Hello World
+		// I expect the string to be returned is "Hello World"
+		Assertions.assertEquals("Hello World", testString, "The method should return Hello World");
+	}
+	
+	@Test
+	public void subtractTwoNumsTest() {
+		
+		// We can work with a simple sum ( 10 - 5) 
+		// OR we can work with logic x - y
+		
+		// Arrange 
+		int result; 
+		int x = 1743392;
+		int y = 12393;
+		
+		// Act
+		result = basicObject.subtractTwoNums(x, y);
+		
+		// Assert
+		// return true IF result = x - y
+		Assertions.assertTrue(result == x - y);
 		
 	}
 
