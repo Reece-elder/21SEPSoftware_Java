@@ -15,7 +15,7 @@ public class LogDemo {
 	public static Logger newLogger = LogManager.getLogger();
 	
 	public static void logTest(String name) {
-		newLogger.fatal("Hey " + name);
+		newLogger.info("Hey " + name);
 	}
 
 }
