@@ -38,20 +38,20 @@ public class BasicTest {
 	
 	// Writing a test to assert helloWorld returns Hello World
 	
-	@Test
-	public void helloWorldTest() {
-		// Arrange - Arranging the variables I need
-		String testString; 
-		
-		// Act - Running the methods / code im testing
-		testString = basicObject.helloWorld();
-		System.out.println(testString);
-		
-		// Assert - Checking the values
-		// When we run helloWorld it SHOULD return Hello World
-		// I expect the string to be returned is "Hello World"
-		Assertions.assertEquals("Hello World", testString, "The method should return Hello World");
-	}
+//	@Test
+//	public void helloWorldTest() {
+//		// Arrange - Arranging the variables I need
+//		String testString; 
+//		
+//		// Act - Running the methods / code im testing
+//		testString = basicObject.helloWorld();
+//		System.out.println(testString);
+//		
+//		// Assert - Checking the values
+//		// When we run helloWorld it SHOULD return Hello World
+//		// I expect the string to be returned is "Hello World"
+//		Assertions.assertEquals("Hello World", testString, "The method should return Hello World");
+//	}
 	
 	@Test
 	public void subtractTwoNumsTest() {
@@ -93,59 +93,59 @@ public class BasicTest {
 	// Write a test to see if the backend is created
 	// test to see if x function in y class of backend works
 
-	@Test
-	public void loopDemoTest() {
-		
-		// Arrange
-		int resultNum;
-		
-		// Act
-		resultNum = basicObject.loopDemo();
-		
-		// Assert
-		Assertions.assertTrue(resultNum == 10);
-		
-	}
-	
-	@Test
-	public void ifElseBranchGreater() {
-		// Arrange
-		String testString;
-		int x = 6;
-		
-		// Act
-		testString = basicObject.ifElsebranch(x);
-		
-		// Assert
-		Assertions.assertEquals(testString, "greater");
-	}
-	
-	@Test
-	public void ifElseBranchEqual() {
-		
-		// Arrange
-		String testString;
-		int x = 5;
-		
-		// Act
-		testString = basicObject.ifElsebranch(x);
-		
-		// Assert
-		Assertions.assertEquals(testString, "equal");
-	}
-	
-	@Test
-	public void ifElseBrancless() {
-		// Arrange
-		String testString;
-		int x = 4;
-		
-		// Act
-		testString = basicObject.ifElsebranch(x);
-		
-		// Assert
-		Assertions.assertEquals(testString, "less");
-	}
+//	@Test
+//	public void loopDemoTest() {
+//		
+//		// Arrange
+//		int resultNum;
+//		
+//		// Act
+//		resultNum = basicObject.loopDemo();
+//		
+//		// Assert
+//		Assertions.assertTrue(resultNum == 10);
+//		
+//	}
+//	
+//	@Test
+//	public void ifElseBranchGreater() {
+//		// Arrange
+//		String testString;
+//		int x = 6;
+//		
+//		// Act
+//		testString = basicObject.ifElsebranch(x);
+//		
+//		// Assert
+//		Assertions.assertEquals(testString, "greater");
+//	}
+//	
+//	@Test
+//	public void ifElseBranchEqual() {
+//		
+//		// Arrange
+//		String testString;
+//		int x = 5;
+//		
+//		// Act
+//		testString = basicObject.ifElsebranch(x);
+//		
+//		// Assert
+//		Assertions.assertEquals(testString, "equal");
+//	}
+//	
+//	@Test
+//	public void ifElseBrancless() {
+//		// Arrange
+//		String testString;
+//		int x = 4;
+//		
+//		// Act
+//		testString = basicObject.ifElsebranch(x);
+//		
+//		// Assert
+//		Assertions.assertEquals(testString, "less");
+//	}
 	
 	
 	
