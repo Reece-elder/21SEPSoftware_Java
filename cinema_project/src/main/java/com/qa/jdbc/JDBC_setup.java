@@ -11,8 +11,12 @@ public class JDBC_setup {
 	// We need to add our driver, db_url, user, pass
 	// final - Will never change from this value
 	
+//	final String db_url = "jdbc:mysql://localhost:3306/pizzeria?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+	
+	//?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+	
 	final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-	final String DB_URL = "jdbc:mysql://localhost:3306";
+	final String DB_URL = "jdbc:mysql://localhost:3306/?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	
 	final String USER = "reece";
 	final String PASS = "root";
@@ -36,5 +40,13 @@ public class JDBC_setup {
 	// An exception is something that goes wrong, but doesnt break the code
 	// Try - contains the code we're TRYING to do 
 	// Catch - tells Java what to do if we hit an exception 
+	
+	public void closeConn() {
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 
 }
