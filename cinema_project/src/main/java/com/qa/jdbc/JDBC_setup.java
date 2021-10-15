@@ -16,7 +16,7 @@ public class JDBC_setup {
 	//?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
 	
 	final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-	final String DB_URL = "jdbc:mysql://localhost:3306/?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+	final String DB_URL = "jdbc:mysql://localhost:3306/qa_cinema?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	
 	final String USER = "reece";
 	final String PASS = "root";
