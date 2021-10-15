@@ -17,7 +17,11 @@ public class MovieDAO {
 	Statement statement;
 	Connection connection;
 	
+	String testString = "Hey, I can put punctuation \"hey\"";
+	
 	public void addMovie() {
+		
+		System.out.println(testString);
 		
 		// statement = jdbc_setup connection 
 		// put that code in createStatement()
@@ -25,7 +29,7 @@ public class MovieDAO {
 		try {
 			connection = jdbc.connect();
 			statement = connection.createStatement(); // a blank statement, what we send to the database
-			String query = "INSERT INTO movies (movie_title, movie_length, movie_genre) VALUES (\"Resident Evil 3\", 105, \"Action Horror\")";
+			String query = "INSERT INTO movies (movie_title, movie_length, movie_genre) VALUES (\"Resident Evil 4\", 105, \"Action Horror\")";
 			statement.executeUpdate(query); // With the statement we've created, run the query we've passed in
 		} catch (SQLException e) {
 			e.printStackTrace();
