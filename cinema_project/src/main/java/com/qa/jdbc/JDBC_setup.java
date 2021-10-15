@@ -1,6 +1,8 @@
 package com.qa.jdbc;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 // This class will contain our database connection stuff
 // And methods to do the basic JDBC connection
@@ -17,5 +19,22 @@ public class JDBC_setup {
 	
 	// Connection is a datatype 
 	Connection conn = null;
+	
+	
+	// create a method to allow us to connect to the database
+	// This method will return a Connection object, and is called connect
+	public Connection connect() {
+		try {
+			conn = DriverManager.getConnection(DB_URL, USER, PASS);
+		} catch (SQLException e) {  // If you can't connect, print an SQL exception error
+			e.printStackTrace();
+		}
+		return conn;
+	}
+	
+	// Try Catches are used to tell Java what to do if an 'exception' occurs
+	// An exception is something that goes wrong, but doesnt break the code
+	// Try - contains the code we're TRYING to do 
+	// Catch - tells Java what to do if we hit an exception 
 
 }
