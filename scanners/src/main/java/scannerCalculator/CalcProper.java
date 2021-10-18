@@ -1,5 +1,6 @@
 package scannerCalculator;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CalcProper {
@@ -15,6 +16,8 @@ public static void main(String[] args) {
 //		char operator;
 		String oper;
 		
+		
+		try {
 		System.out.println("Enter number 1: ");
 		num1 = scan.nextDouble();
 		System.out.println("Enter number 2: ");
@@ -43,6 +46,11 @@ public static void main(String[] args) {
 			System.out.println("Default");
 			break;
 		}
+		} catch(InputMismatchException e){
+			System.out.println("That is not a valid input, please input a number!");
+		}
+		
+		
 		
 //		switch(operator) {
 //		case '+':
