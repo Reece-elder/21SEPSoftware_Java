@@ -60,6 +60,7 @@ public class MovieDAO {
 		try {
 			connection = jdbc.connect();
 			PreparedStatement statement = connection.prepareStatement("INSERT INTO movies (movies_title, movie_length, movie_genre) VALUES(?,?,?)"); {
+				//The question marks replace the hard coded data!
 				statement.setString(1, movie.getMovie_title());
 				statement.setInt(2, movie.getMovie_length());
 				statement.setString(3, movie.getMovie_genre());
