@@ -1,6 +1,7 @@
 package com.qa.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -54,6 +55,21 @@ public class MovieDAO {
 		
 	}
 	
+	//CREATE USING PREPARED STATEMENTS
+	public void createPreparedStatement(Movie movie) {
+		try {
+			connection = jdbc.connect();
+			PreparedStatement statement = connection.prepareStatement("INSERT INTO movies (movies_title, movie_length, movie_genre) VALUES(?,?,?)"); {
+				statement.setString(1, movie.getMovie_title());
+				statement.setInt(2, movie.getMovie_length());
+				statement.setString(3, movie.getMovie_genre());
+				statement.executeUpdate();
+			}
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	//READ
 	
 	public Movie readMovie(Long id) {
@@ -65,7 +81,7 @@ public class MovieDAO {
 				return movieFromResultSet(resultSet);
 			}
 		} catch(SQLException e){
-			System.out.println("Hello");
+			e.printStackTrace();
 		}
 		return null;
 	}
@@ -83,7 +99,7 @@ public class MovieDAO {
 			return readMovie(movie.getMovie_id());
 			
 			} catch (SQLException e) {
-				System.out.println("Hi");
+				e.printStackTrace();
 		}
 		return null;
 	}
@@ -96,7 +112,7 @@ public class MovieDAO {
 			statement = connection.createStatement();
 			statement.executeUpdate("DELETE FROM movies WHERE movie_id = " + id);
 		} catch(SQLException e) {
-			System.out.println("Bye");
+			e.printStackTrace();
 		}
 		return null;
 	}
