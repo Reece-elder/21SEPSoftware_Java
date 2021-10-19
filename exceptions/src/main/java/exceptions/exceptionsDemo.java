@@ -24,7 +24,7 @@ public class exceptionsDemo {
 			m.multiply(4, 3);
 		} catch (MultipleByThreeException e) {
 			System.out.println("Cannot multiply a number by 3!");
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
 	
 		
