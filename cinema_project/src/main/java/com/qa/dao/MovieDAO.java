@@ -77,11 +77,28 @@ public class MovieDAO {
 		try {
 			connection = jdbc.connect();
 			statement = connection.createStatement();
-			ResultSet resultSet = statement.executeQuery("SELECT * FROM movies WHERE id = " + id);{
+			ResultSet resultSet = statement.executeQuery("SELECT * FROM movies WHERE movie_id = " + id);{
 				resultSet.next();		//.next() is an inbuilt java method, that moves through the SQL table
 				return movieFromResultSet(resultSet);
 			}
 		} catch(SQLException e){
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	//READ PREPARED STATEMENT
+	public Movie readPreparedStatement(Long id) {
+		try {
+			connection = jdbc.connect();
+			PreparedStatement statement = connection.prepareStatement("SELECT * FROM movies WHERE movie_id = ?");
+			statement.setLong(1, id);
+			
+			ResultSet resultSet = statement.executeQuery();
+			resultSet.next();
+			return movieFromResultSet(resultSet);
+			
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return null;
@@ -96,7 +113,7 @@ public class MovieDAO {
 			statement = connection.createStatement();
 			statement.executeUpdate("UPDATE movie SET movie_title = '" + movie.getMovie_title() 
 			+ "' , movie_length = '" + movie.getMovie_length() + "', movie_genre = '" + movie.getMovie_genre()
-			+ "' WHERE id = " +movie.getMovie_id());
+			+ "' WHERE movie_id = " +movie.getMovie_id());
 			return readMovie(movie.getMovie_id());
 			
 			} catch (SQLException e) {
@@ -104,6 +121,28 @@ public class MovieDAO {
 		}
 		return null;
 	}
+	
+	//UPDATE PREPARED STATEMENT
+	
+	public Movie updatePreparedStatement(Movie movie) {
+		try {
+			connection = jdbc.connect();
+			PreparedStatement statement = connection.prepareStatement("UPDATE movies SET movie_title = ?,"
+					+ "movie_length = ?, movie_genre = ? WHERE movie_id = ?");
+			statement.setString(1, movie.getMovie_title());
+			statement.setInt(2, movie.getMovie_length());
+			statement.setString(3, movie.getMovie_genre());
+			statement.setLong(4, movie.getMovie_id());
+			
+			statement.executeUpdate();
+			return readPreparedStatement(movie.getMovie_id());
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	
 	//DELETE
 	
@@ -116,6 +155,20 @@ public class MovieDAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	//DELETE PREPARED STATEMENT
+	
+	public int deletePreparedStatement(Long id) {
+		try {
+			connection = jdbc.connect();
+			PreparedStatement statement = connection.prepareStatement("DELETE FROM movies WHERE movie_id = ?");
+			statement.setLong(1, id);
+			return statement.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
 	}
 	
 
